@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Fondo animado */
+        .back {
+            position: fixed;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            animation: backdiv 10s ease-in-out infinite;
+        }
+
+        @keyframes backdiv {
+            0% { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+            50% { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+            100% { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+        }
+
+        /* Corazón animado */
+        .heart {
+            position: absolute;
+            margin: auto;
+            top: 170px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: yellow;
+            height: 150px;
+            width: 150px;
+            transform: rotate(-45deg);
+            animation: beat 1s ease-in-out infinite;
+        }
+
+        .heart:after {
+            background-color: yellow;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 0;
+            left: 80px;
+        }
+
+        .heart:before {
+            background-color: yellow;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: -80px;
+            left: 0;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(0.9) rotate(-45deg);
+            }
+        }
+
+        /* Estilo de texto dinámico */
+        .bday {
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            font-size: 20px;
+            font-family: 'Pacifico', cursive;
+            font-weight: 600;
+            color: #0e2804;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+            background: rgba(173, 237, 35, 0.8);
+            border-radius: 15px;
+            animation: fadeIn 3s ease-in-out;
+            line-height: 1.5;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            background-color: rgb(143, 216, 64);
+            display: block;
+            margin: 30px auto;
+            padding: 15px 25px;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-family: 'Nunito', sans-serif;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(113, 186, 34);
+            transform: translateY(-3px);
+        }
+
+        a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        /* Elementos centrados */
+        .elements {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <title>Flores Amarillas</title>
+</head>
+<body>
+    <div class="back">
+        <div class="bday">
+            Buenas noches mi querida y bella dama. <br>
+            Te envío esta flor amarilla como un pequeño regalo por el día de las flores amarillas, y recordarte lo especial que eres para mí. <br>
+            Espero que tengas un excelente día, señorita que alegra mis días. Te quiero mucho.
+        </div>
+        
+        <div class="elements">
+            <div class="heart"></div>
+            <footer>
+                <div class="boton">
+                    <button><a href="index2.html"><span>Has click aquí</span></a></button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
